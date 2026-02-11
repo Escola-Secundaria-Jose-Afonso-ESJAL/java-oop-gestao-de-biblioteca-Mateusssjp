@@ -11,14 +11,39 @@ public class Biblioteca {
     }
 
     public boolean adicionarLivro(Livro livro) {
-        
+        if (livros.size() < MAX_LIVROS) {
+            for (int i = 0; i < livros.size(); i++) {
+                if (livros.get(i).getTitulo() != livro.getTitulo()) {
+                    livros.add(livro); 
+                }
+            }
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-
+/*
     public boolean removerLivro(String titulo) {
-        
+        livros.remove(livro);
+        return true;
     }
-
-    public void listarLivros() {
+*/
+    public void listarLivros() 
+    {
+        System.out.println("Livros disponíveis:");
         
+        for (int i = 0; i < livros.size(); i++) 
+        {
+            Livro livrosDisponiveis = livros.get(i);
+            System.out.println(
+                livrosDisponiveis.getTitulo() + 
+                " | Autor: " + livrosDisponiveis.getAutor() +
+                " | Ano: " + livrosDisponiveis.getAno()
+            );
+        }
+        
+        System.out.print("\n");
     }
 }
