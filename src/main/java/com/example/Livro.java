@@ -1,4 +1,4 @@
-package src.main.java.com.example;
+package com.example;
 
 class Livro {
     private String titulo; // Variável de instância
