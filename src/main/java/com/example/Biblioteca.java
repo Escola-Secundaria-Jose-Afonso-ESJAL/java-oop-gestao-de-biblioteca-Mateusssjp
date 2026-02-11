@@ -1,4 +1,4 @@
-package  com.example;
+package  src.main.java.com.example;
 
 import java.util.ArrayList;
 
@@ -24,12 +24,11 @@ public class Biblioteca {
             return false;
         }
     }
-/*
+    
     public boolean removerLivro(String titulo) {
-        livros.remove(livro);
         return true;
     }
-*/
+
     public void listarLivros() 
     {
         System.out.println("Livros disponíveis:");
